@@ -6,7 +6,6 @@
 <title>Калькулятор буста</title>
 
 <style>
-/* --- ГЛОБАЛЬНЫЙ КРАСНЫЙ СТИЛЬ + ФОНОВОЕ ИЗОБРАЖЕНИЕ --- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -23,7 +22,6 @@ body {
     color: #fff;
 }
 
-/* --- КРАСНАЯ НЕОН СТЕКЛЯННАЯ КАРТОЧКА --- */
 .container {
     background: rgba(20, 0, 0, 0.78);
     padding: 25px;
@@ -276,9 +274,7 @@ h1 {
 <div class="result" id="profitResult"></div>
 </div>
 
-<!-- ------------------- СКРИПТ ------------------- -->
 <script>
-/* Твой полный JavaScript без изменений */
 document.getElementById('gameSelect').addEventListener('change', function () {
     const boostType = document.getElementById('boostType');
     const dotaInputs = document.getElementById('dotaInputs');
@@ -331,7 +327,6 @@ function updateValorantFields() {
     targetRank.style.display = boostType === 'netwin' ? 'none' : 'block';
 }
 
-/* Тарифы */
 const soloRatesD = [
     { min: 1, max: 2000, rate: 125 },
     { min: 2000, max: 3000, rate: 150 },
@@ -411,7 +406,6 @@ const netwinRatesV = [
     { min: 24, max: 25, rate: 1500 }
 ];
 
-/* ----------------------- РАСЧЁТЫ ----------------------- */
 function calculatePrice() {
     const gameSelect = document.getElementById('gameSelect').value;
 
@@ -517,7 +511,6 @@ function calculatePrice() {
     }
 }
 
-/* ПРОФИТ */
 function calculateProfit() {
     const platform = document.getElementById('platform').value;
     let clientPayment = parseInt(document.getElementById('clientPayment').value);
@@ -548,3 +541,4 @@ document.getElementById('duoDoubleButton').addEventListener('click', function() 
 
 </body>
 </html>
+
