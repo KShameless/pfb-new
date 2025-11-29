@@ -461,16 +461,23 @@ function calculatePrice() {
 
                 let pricePerGame = band.rate;
 
-                if (isDuoDouble) {
-                    // от 7000 до 8500 (включительно левой границы) фикс 600 руб за победу
-                    if (mmr >= 7000 && mmr < 8500) {
-                        pricePerGame = 600;
-                    }
-                    // клиенты с даблами от 5620 до 7000 +30% к фиксированной цене диапазона
-                    else if (mmr >= 5620 && mmr < 7000) {
-                        pricePerGame = pricePerGame * 1.3;
-                    }
-                }
+                let pricePerGame = band.rate;
+
+if (isDuoDouble) {
+
+    if (mmr < 5630) {
+        pricePerGame = pricePerGame * 1.5;
+    }
+
+    else if (mmr >= 5630 && mmr < 7000) {
+        pricePerGame = pricePerGame * 1.3;
+    }
+
+    else if (mmr >= 7000 && mmr < 8500) {
+        pricePerGame = 600;
+    }
+}
+
 
                 totalPrice += pricePerGame;
 
@@ -525,3 +532,4 @@ updateFields();
 
 </body>
 </html>
+
