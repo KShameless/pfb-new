@@ -150,72 +150,72 @@ h1 {
 <h1>Калькулятор буста</h1>
 
 <div class="input-group">
-<label for="gameSelect">Выберите игру:</label>
-<select id="gameSelect">
-<option value="dota">Dota 2</option>
-<option value="valorant">Valorant</option>
-</select>
+    <label for="gameSelect">Выберите игру:</label>
+    <select id="gameSelect">
+        <option value="dota">Dota 2</option>
+        <option value="valorant">Valorant</option>
+    </select>
 </div>
 
 <div class="input-group" id="boostTypeGroup">
-<label for="boostType">Тип буста:</label>
-<select id="boostType">
-<option value="solo">Соло буст</option>
-<option value="duo">Дуо буст</option>
-<option value="honor">Буст порядочности</option>
-<option value="hours">Отыгрыш часов</option>
-</select>
+    <label for="boostType">Тип буста:</label>
+    <select id="boostType">
+        <option value="solo">Соло буст</option>
+        <option value="duo">Дуо буст</option>
+        <option value="honor">Буст порядочности</option>
+        <option value="hours">Отыгрыш часов</option>
+    </select>
 </div>
 
 <!-- DOTA -->
 <div id="dotaInputs">
-<div class="input-group" id="soloInputs">
-<label>Изначальный ММР:</label>
-<input type="number" id="initialMMR">
-<label>Конечный ММР:</label>
-<input type="number" id="finalMMR">
-<button id="soloDoubleButton">Даблы</button>
-</div>
+    <div class="input-group" id="soloInputs">
+        <label>Изначальный ММР:</label>
+        <input type="number" id="initialMMR">
+        <label>Конечный ММР:</label>
+        <input type="number" id="finalMMR">
+        <button id="soloDoubleButton">Даблы</button>
+    </div>
 
-<div class="input-group" id="duoInputs" style="display:none;">
-<label>ММР клиента:</label>
-<input type="number" id="clientMMR">
-<label>Количество игр:</label>
-<input type="number" id="gameCount">
-<button id="duoDoubleButton">Даблы</button>
-</div>
+    <div class="input-group" id="duoInputs" style="display:none;">
+        <label>ММР клиента:</label>
+        <input type="number" id="clientMMR">
+        <label>Количество игр:</label>
+        <input type="number" id="gameCount">
+        <button id="duoDoubleButton">Даблы</button>
+    </div>
 
-<div class="input-group" id="honorInputs" style="display:none;">
-<label>ММР клиента:</label>
-<input type="number" id="clientMMRHonor">
-<label>Начальная порядочность:</label>
-<input type="number" id="initialHonor">
-<label>Конечная порядочность:</label>
-<input type="number" id="finalHonor">
-</div>
+    <div class="input-group" id="honorInputs" style="display:none;">
+        <label>ММР клиента:</label>
+        <input type="number" id="clientMMRHonor">
+        <label>Начальная порядочность:</label>
+        <input type="number" id="initialHonor">
+        <label>Конечная порядочность:</label>
+        <input type="number" id="finalHonor">
+    </div>
 
-<div class="input-group" id="hoursInputs" style="display:none;">
-<label>Количество часов:</label>
-<input type="number" id="hoursCount">
-</div>
+    <div class="input-group" id="hoursInputs" style="display:none;">
+        <label>Количество часов:</label>
+        <input type="number" id="hoursCount">
+    </div>
 </div>
 
 <!-- VALORANT -->
 <div id="valorantInputs" style="display:none;">
-<div class="input-group">
-<label>Текущий ранг:</label>
-<select id="currentRankSelect"></select>
-</div>
+    <div class="input-group">
+        <label>Текущий ранг:</label>
+        <select id="currentRankSelect"></select>
+    </div>
 
-<div class="input-group" id="targetRank">
-<label>Желаемый ранг:</label>
-<select id="targetRankSelect"></select>
-</div>
+    <div class="input-group" id="targetRank">
+        <label>Желаемый ранг:</label>
+        <select id="targetRankSelect"></select>
+    </div>
 
-<div class="input-group" id="netwinGamesGroup" style="display:none;">
-<label>Количество игр:</label>
-<input type="number" id="netwinGames">
-</div>
+    <div class="input-group" id="netwinGamesGroup" style="display:none;">
+        <label>Количество игр:</label>
+        <input type="number" id="netwinGames">
+    </div>
 </div>
 
 <button onclick="calculatePrice()">Рассчитать цену</button>
@@ -224,26 +224,25 @@ h1 {
 
 <div class="separator"></div>
 
-<!-- КАЛЬКУЛЯТОР ПРОФИТА -->
 <div class="container">
 <h1>Калькулятор профита</h1>
 
 <div class="input-group">
-<label>Платформа:</label>
-<select id="platform">
-<option value="fp">FP</option>
-<option value="g2g">G2G</option>
-</select>
+    <label>Платформа:</label>
+    <select id="platform">
+        <option value="fp">FP</option>
+        <option value="g2g">G2G</option>
+    </select>
 </div>
 
 <div class="input-group">
-<label>Получено от клиента (руб):</label>
-<input type="number" id="clientPayment">
+    <label>Получено от клиента (руб):</label>
+    <input type="number" id="clientPayment">
 </div>
 
 <div class="input-group">
-<label>Заплачено бустеру (руб):</label>
-<input type="number" id="boosterPayment">
+    <label>Заплачено бустеру (руб):</label>
+    <input type="number" id="boosterPayment">
 </div>
 
 <button onclick="calculateProfit()">Рассчитать профит</button>
@@ -276,6 +275,7 @@ document.getElementById("gameSelect").addEventListener("change", function () {
         dota.style.display = "none";
         val.style.display = "block";
     }
+    updateFields();
 });
 
 document.getElementById("boostType").addEventListener("change", function () {
@@ -284,16 +284,23 @@ document.getElementById("boostType").addEventListener("change", function () {
 
 function updateFields() {
     const boostType = document.getElementById("boostType").value;
-    document.getElementById("soloInputs").style.display = boostType === "solo" ? "block" : "none";
-    document.getElementById("duoInputs").style.display = boostType === "duo" ? "block" : "none";
-    document.getElementById("honorInputs").style.display = boostType === "honor" ? "block" : "none";
-    document.getElementById("hoursInputs").style.display = boostType === "hours" ? "block" : "none";
+    const game = document.getElementById("gameSelect").value;
 
+    // Dota
+    document.getElementById("soloInputs").style.display =
+        (game === "dota" && boostType === "solo") ? "block" : "none";
+    document.getElementById("duoInputs").style.display =
+        (game === "dota" && boostType === "duo") ? "block" : "none";
+    document.getElementById("honorInputs").style.display =
+        (game === "dota" && boostType === "honor") ? "block" : "none";
+    document.getElementById("hoursInputs").style.display =
+        (game === "dota" && boostType === "hours") ? "block" : "none";
+
+    // Valorant
     document.getElementById("netwinGamesGroup").style.display =
-        boostType === "netwin" ? "block" : "none";
-
+        (game === "valorant" && boostType === "netwin") ? "block" : "none";
     document.getElementById("targetRank").style.display =
-        boostType === "netwin" ? "none" : "block";
+        (game === "valorant" && boostType === "netwin") ? "none" : "block";
 }
 
 document.getElementById("soloDoubleButton").addEventListener("click", function () {
@@ -303,95 +310,217 @@ document.getElementById("duoDoubleButton").addEventListener("click", function ()
     this.textContent = this.textContent === "Даблы" ? "Обычный" : "Даблы";
 });
 
-/* ---------------------------------
-   ЦЕНЫ
------------------------------------*/
 const soloRatesD = [
-    { min: 1, max: 2000, rate: 125 },
-    { min: 2000, max: 3000, rate: 150 },
-    { min: 3000, max: 3500, rate: 185 },
-    { min: 3500, max: 4000, rate: 250 },
-    { min: 4000, max: 4500, rate: 300 },
-    { min: 4500, max: 5000, rate: 330 },
-    { min: 5000, max: 5500, rate: 400 },
-    { min: 5500, max: 6500, rate: 500 },
-    { min: 6500, max: 7500, rate: 600 },
-    { min: 7500, max: 8500, rate: 650 },
-    { min: 8500, max: 9000, rate: 900 },
-    { min: 9000, max: 9500, rate: 1200 },
-    { min: 9500, max: 10000, rate: 1400 },
+    { min: 1,     max: 2000,  rate: 125 },
+    { min: 2000,  max: 3000,  rate: 150 },
+    { min: 3000,  max: 3500,  rate: 185 },
+    { min: 3500,  max: 4000,  rate: 250 },
+    { min: 4000,  max: 4500,  rate: 300 },
+    { min: 4500,  max: 5000,  rate: 330 },
+    { min: 5000,  max: 5500,  rate: 420 },
+    { min: 5500,  max: 6000,  rate: 470 },
+    { min: 6000,  max: 6500,  rate: 560 },
+    { min: 6500,  max: 7700,  rate: 600 },
+    { min: 7700,  max: 8500,  rate: 800 }, 
+    { min: 8500,  max: 9000,  rate: 900 },
+    { min: 9000,  max: 9500,  rate: 1200 },
+    { min: 9500,  max: 10000, rate: 1400 },
     { min: 10000, max: 10500, rate: 1700 },
     { min: 10500, max: 11000, rate: 2000 },
 ];
 
 const duoRatesD = [
-    { min: 10, max: 2000, rate: 55 },
-    { min: 2000, max: 3000, rate: 65 },
-    { min: 3000, max: 3500, rate: 75 },
-    { min: 3500, max: 4000, rate: 90 },
-    { min: 4000, max: 4500, rate: 100 },
-    { min: 4500, max: 5000, rate: 135 },
-    { min: 5000, max: 5500, rate: 165 },
-    { min: 5500, max: 6000, rate: 200 },
-    { min: 6000, max: 6500, rate: 300 },
-    { min: 6500, max: 7000, rate: 400 },
-    { min: 7000, max: 7500, rate: 500 },
-    { min: 7500, max: 8000, rate: 700 },
-    { min: 8000, max: 8500, rate: 850 },
-    { min: 8500, max: 9000, rate: 1000 },
-    { min: 9000, max: 9500, rate: 1200 },
-    { min: 9500, max: 10000, rate: 1500 },
-    { min: 10000, max: 10500, rate: 1800 },
-    { min: 10500, max: 11000, rate: 2000 },
+    { min: 10,    max: 2000,  rate: 55 },
+    { min: 2000,  max: 3000,  rate: 65 },
+    { min: 3000,  max: 3500,  rate: 75 },
+    { min: 3500,  max: 4000,  rate: 90 },
+    { min: 4000,  max: 4500,  rate: 100 },
+    { min: 4500,  max: 5000,  rate: 135 },
+    { min: 5000,  max: 5500,  rate: 165 },
+    { min: 5500,  max: 6000,  rate: 200 },
+    { min: 6000,  max: 6500,  rate: 300 },
+    { min: 6500,  max: 7000,  rate: 400 },
+    { min: 7000,  max: 8500,  rate: 480 }, 
+    { min: 8500,  max: 9500,  rate: 700 },
+    { min: 9500,  max: 10000, rate: 800 },
 ];
+
+
+const soloRatesV = [
+    { min: 0, max: 3,  rate: 100 },
+    { min: 3, max: 6,  rate: 150 },
+    { min: 6, max: 9,  rate: 200 },
+    { min: 9, max: 12, rate: 300 },
+    { min: 12, max: 15, rate: 400 },
+    { min: 15, max: 18, rate: 600 },
+    { min: 18, max: 21, rate: 1000 },
+    { min: 21, max: 22, rate: 1500 },
+    { min: 22, max: 23, rate: 2250 },
+    { min: 23, max: 24, rate: 22500 }
+];
+
+const duoRatesV = [
+    { min: 0, max: 3,  rate: 150 },
+    { min: 3, max: 6,  rate: 200 },
+    { min: 6, max: 9,  rate: 300 },
+    { min: 9, max: 12, rate: 450 },
+    { min: 12, max: 15, rate: 600 },
+    { min: 15, max: 18, rate: 900 },
+    { min: 18, max: 21, rate: 1500 },
+    { min: 21, max: 22, rate: 2500 },
+    { min: 22, max: 23, rate: 4500 },
+    { min: 23, max: 24, rate: 35000 }
+];
+
+const netwinRatesV = [
+    { min: 0, max: 3,  rate: 25 },
+    { min: 3, max: 6,  rate: 50 },
+    { min: 6, max: 9,  rate: 75 },
+    { min: 9, max: 12, rate: 100 },
+    { min: 12, max: 15, rate: 125 },
+    { min: 15, max: 18, rate: 200 },
+    { min: 18, max: 21, rate: 350 },
+    { min: 21, max: 22, rate: 400 },
+    { min: 22, max: 23, rate: 500 },
+    { min: 23, max: 24, rate: 600 },
+    { min: 24, max: 25, rate: 1500 }
+];
+
+(function fillValorantRanks() {
+    const names = [
+        "Iron 1","Iron 2","Iron 3",
+        "Bronze 1","Bronze 2","Bronze 3",
+        "Silver 1","Silver 2","Silver 3",
+        "Gold 1","Gold 2","Gold 3",
+        "Platinum 1","Platinum 2","Platinum 3",
+        "Diamond 1","Diamond 2","Diamond 3",
+        "Ascendant 1","Ascendant 2","Ascendant 3",
+        "Immortal 1","Immortal 2","Immortal 3",
+        "Radiant"
+    ];
+    const cur = document.getElementById("currentRankSelect");
+    const tar = document.getElementById("targetRankSelect");
+    names.forEach((name, i) => {
+        const o1 = document.createElement("option");
+        o1.value = i;
+        o1.textContent = name;
+        cur.appendChild(o1);
+
+        const o2 = document.createElement("option");
+        o2.value = i;
+        o2.textContent = name;
+        tar.appendChild(o2);
+    });
+})();
 
 function calculatePrice() {
     const game = document.getElementById("gameSelect").value;
+    const boostType = document.getElementById("boostType").value;
     let totalPrice = 0;
 
     if (game === "dota") {
-        const boostType = document.getElementById("boostType").value;
+        const isSoloDouble = document.getElementById("soloDoubleButton").textContent === "Даблы";
+        const isDuoDouble  = document.getElementById("duoDoubleButton").textContent === "Даблы";
 
         if (boostType === "solo") {
             const start = parseInt(document.getElementById("initialMMR").value);
-            const end = parseInt(document.getElementById("finalMMR").value);
+            const end   = parseInt(document.getElementById("finalMMR").value);
 
-            for (let i = start; i < end; i++) {
-                const rate = soloRatesD.find(r => i >= r.min && i < r.max);
-                if (rate) totalPrice += rate.rate / 100;
+            if (isNaN(start) || isNaN(end) || end <= start) {
+                document.getElementById("result").textContent = "Проверь ММР.";
+                return;
             }
 
-            if (document.getElementById("soloDoubleButton").textContent === "Даблы")
-                totalPrice *= 0.75;
-        }
+            soloRatesD.forEach(r => {
+                const segStart = Math.max(start, r.min);
+                const segEnd   = Math.min(end, r.max);
+                if (segStart < segEnd) {
+                    const delta = segEnd - segStart;
+                    let rate = r.rate;
 
-        if (boostType === "duo") {
-            const mmr = parseInt(document.getElementById("clientMMR").value);
+                    if (isSoloDouble && r.min === 7700) {
+                        rate = rate * 0.7;
+                    }
+
+                    totalPrice += (delta / 100) * rate;
+                }
+            });
+
+        } else if (boostType === "duo") {
+            let mmr   = parseInt(document.getElementById("clientMMR").value);
             let games = parseInt(document.getElementById("gameCount").value);
-            let current = mmr;
+
+            if (isNaN(mmr) || isNaN(games) || games <= 0) {
+                document.getElementById("result").textContent = "Проверь ММР и количество игр.";
+                return;
+            }
 
             for (let i = 0; i < games; i++) {
-                current += document.getElementById("duoDoubleButton").textContent === "Даблы" ? 50 : 25;
-                const rate = duoRatesD.find(r => current >= r.min && current < r.max);
-                if (rate) totalPrice += rate.rate;
+                const band = duoRatesD.find(r => mmr >= r.min && mmr < r.max);
+                if (!band) break;
+
+                let pricePerGame = band.rate;
+
+                if (isDuoDouble) {
+                    // от 7000 до 8500 (включительно левой границы) фикс 600 руб за победу
+                    if (mmr >= 7000 && mmr < 8500) {
+                        pricePerGame = 600;
+                    }
+                    // клиенты с даблами от 5620 до 7000 +30% к фиксированной цене диапазона
+                    else if (mmr >= 5620 && mmr < 7000) {
+                        pricePerGame = pricePerGame * 1.3;
+                    }
+                }
+
+                totalPrice += pricePerGame;
+
+                // рост ММР: без даблов +25, с даблами +50
+                mmr += isDuoDouble ? 50 : 25;
             }
+        }
+    } else if (game === "valorant") {
+        const currentRank = parseInt(document.getElementById("currentRankSelect").value);
+        const targetRank  = parseInt(document.getElementById("targetRankSelect").value);
+
+        if (boostType === "solo") {
+            for (let i = currentRank; i < targetRank; i++) {
+                const band = soloRatesV.find(r => i >= r.min && i < r.max);
+                if (band) totalPrice += band.rate;
+            }
+        } else if (boostType === "duo") {
+            for (let i = currentRank; i < targetRank; i++) {
+                const band = duoRatesV.find(r => i >= r.min && i < r.max);
+                if (band) totalPrice += band.rate;
+            }
+        } else if (boostType === "netwin") {
+            const netwinGames = parseInt(document.getElementById("netwinGames").value) || 0;
+            const band = netwinRatesV.find(r => currentRank >= r.min && currentRank < r.max);
+            if (band) totalPrice = band.rate * netwinGames;
         }
     }
 
-    document.getElementById("result").textContent = `Цена: ${totalPrice.toFixed(2)} руб.`;
+    document.getElementById("result").textContent =
+        `Цена: ${totalPrice.toFixed(2)} руб.`;
 }
-
 function calculateProfit() {
     let client = parseFloat(document.getElementById("clientPayment").value);
     let booster = parseFloat(document.getElementById("boosterPayment").value);
     let platform = document.getElementById("platform").value;
 
-    if (platform === "fp") profit = client * 0.97 - booster;
+    if (isNaN(client) || isNaN(booster) || client <= 0 || booster < 0) {
+        document.getElementById("profitResult").textContent = "Проверь суммы.";
+        return;
+    }
+
+    let profit = 0;
+    if (platform === "fp")  profit = client * 0.97 - booster;
     if (platform === "g2g") profit = client * 0.95 * 0.74 - booster;
 
     document.getElementById("profitResult").textContent =
         `Профит: ${profit.toFixed(2)} руб.`;
 }
+
+updateFields();
 </script>
 
 </body>
